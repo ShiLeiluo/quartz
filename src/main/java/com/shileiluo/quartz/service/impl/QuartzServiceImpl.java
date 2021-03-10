@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 public class QuartzServiceImpl implements QuartzService {
 
     private static final Logger logger = LoggerFactory.getLogger(QuartzServiceImpl.class);
-    private static final String METHODNAME = "execute";
+    private static final String METHADONE = "execute";
 
     @Override
     public void executeTask(String beanName, String methodName) {
@@ -46,6 +46,6 @@ public class QuartzServiceImpl implements QuartzService {
 
     @Override
     public void executeTask(String beanName) {
-        executeTask(beanName, METHODNAME);
+        executeTask(beanName, METHADONE);
     }
 }

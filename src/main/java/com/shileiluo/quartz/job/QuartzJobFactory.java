@@ -18,8 +18,12 @@ import org.springframework.stereotype.Service;
 @Service("quartzJobFactory")
 public class QuartzJobFactory extends QuartzJobBean {
 
-    @Autowired
+    final
     QuartzService quartzService;
+    @Autowired
+    public QuartzJobFactory(QuartzService quartzService){
+        this.quartzService = quartzService;
+    }
 
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {

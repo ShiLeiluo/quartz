@@ -27,11 +27,16 @@ import java.util.Set;
 public class SchedulerJobServiceImpl implements SchedulerJobService {
 
     private static final Logger logger = LoggerFactory.getLogger(SchedulerJobServiceImpl.class);
-    @Autowired
+    final
     private Scheduler scheduler;
 
-    @Autowired
+    final
     private ScheduleJobInService scheduleJobInService;
+    @Autowired
+    public  SchedulerJobServiceImpl(Scheduler scheduler, ScheduleJobInService scheduleJobInService){
+        this.scheduler = scheduler;
+        this.scheduleJobInService = scheduleJobInService;
+    }
 
     /**
      * 获取所有的任务
