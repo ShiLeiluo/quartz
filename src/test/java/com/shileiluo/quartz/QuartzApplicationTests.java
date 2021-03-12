@@ -11,6 +11,7 @@ public class QuartzApplicationTests {
 
     @Test
     public void contextLoads() {
+        System.out.println("test");
     }
 
 }
