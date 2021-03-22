@@ -113,7 +113,7 @@ quartz是一个java编写的开源任务调度框架其主要调度元素有：
 
    ```java
    /**
-    * @author: Zhang Chengcheng
+    * @author: ShiLeiluo
     * @create: 2018-05-31 14:38
     **/
    @Service("quartzJobFactory")
@@ -138,7 +138,7 @@ quartz是一个java编写的开源任务调度框架其主要调度元素有：
 
    ```java
    /**
-    * @author: Zhang Chengcheng
+    * @author: ShiLeiluo
     * @create: 2018-05-31 15:34
     **/
    @Service("quartzService")
@@ -176,7 +176,7 @@ quartz是一个java编写的开源任务调度框架其主要调度元素有：
    ```java
    /**
     *
-    * @author: Zhang Chengcheng
+    * @author: ShiLeiluo
     * @create: 2018-05-31 15:07
     **/
    @Component("ApplicationContextUtil")
