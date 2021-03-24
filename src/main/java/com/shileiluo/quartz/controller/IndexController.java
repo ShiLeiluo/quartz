@@ -6,9 +6,11 @@ import org.quartz.Scheduler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -17,7 +19,7 @@ import java.util.List;
  * @date: 2021/3/14 18:29
  * @version: v1.0
  */
-
+@Controller
 public class IndexController {
     private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
@@ -27,13 +29,12 @@ public class IndexController {
     @Autowired
     private SchedulerJobService schedulerJobService;
 
-    @RequestMapping("/")
+    @RequestMapping("/index")
     public String index(Model model){
         logger.info("[JobController] the url path:------------/index----------------");
         logger.info("[JobController] the method index is start......");
         List<ScheduleJob> jobList = schedulerJobService.getAllScheduleJob();
         model.addAttribute("jobs",jobList);
-        System.out.println(jobList);
         logger.info("[JobController] the method index is end......");
         return "index";
     }

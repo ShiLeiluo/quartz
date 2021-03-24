@@ -19,12 +19,9 @@ import java.util.List;
 @Service("scheduleJobInService")
 public class ScheduleJobInServiceImpl implements ScheduleJobInService {
 
-    final
-    ScheduleJobMapper scheduleJobMapper;
     @Autowired
-    public ScheduleJobInServiceImpl(ScheduleJobMapper scheduleJobMapper){
-        this.scheduleJobMapper = scheduleJobMapper;
-    }
+    ScheduleJobMapper scheduleJobMapper;
+
 
     @Override
     public int insert(ScheduleJob scheduleJob) {
